@@ -1,0 +1,619 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1A29F31F9221C101EBF1A4B4 /* Pods_Zonky_Stats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3584A9C267102AFEF9708C56 /* Pods_Zonky_Stats.framework */; };
+		51CDB1652D826225B73099B9 /* Pods_Zonky_StatsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 238727A70D89CB070244B722 /* Pods_Zonky_StatsTests.framework */; };
+		F96A5C001FBDB1940035C1D8 /* ZonkyStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96A5BF81FBDB1920035C1D8 /* ZonkyStatsViewController.swift */; };
+		F96A5C011FBDB1940035C1D8 /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96A5BF91FBDB1920035C1D8 /* Serializable.swift */; };
+		F96A5C021FBDB1940035C1D8 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96A5BFA1FBDB1930035C1D8 /* Repository.swift */; };
+		F96A5C031FBDB1940035C1D8 /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96A5BFB1FBDB1930035C1D8 /* ApiRequest.swift */; };
+		F96A5C041FBDB1940035C1D8 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96A5BFC1FBDB1930035C1D8 /* Model.swift */; };
+		F96A5C051FBDB1940035C1D8 /* ZonkyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96A5BFD1FBDB1930035C1D8 /* ZonkyAPI.swift */; };
+		F96A5C061FBDB1940035C1D8 /* MyGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96A5BFE1FBDB1930035C1D8 /* MyGraphView.swift */; };
+		F96A5C071FBDB1940035C1D8 /* RadioBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96A5BFF1FBDB1930035C1D8 /* RadioBarView.swift */; };
+		F96A5C091FBDCE470035C1D8 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96A5C081FBDCE470035C1D8 /* Date.swift */; };
+		F9DBDA5F1FBDB009003EE548 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DBDA5E1FBDB009003EE548 /* AppDelegate.swift */; };
+		F9DBDA641FBDB009003EE548 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9DBDA621FBDB009003EE548 /* Main.storyboard */; };
+		F9DBDA661FBDB009003EE548 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9DBDA651FBDB009003EE548 /* Assets.xcassets */; };
+		F9DBDA691FBDB009003EE548 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9DBDA671FBDB009003EE548 /* LaunchScreen.storyboard */; };
+		F9DBDA741FBDB009003EE548 /* Zonky_StatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DBDA731FBDB009003EE548 /* Zonky_StatsTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F9DBDA701FBDB009003EE548 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9DBDA531FBDB009003EE548 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9DBDA5A1FBDB009003EE548;
+			remoteInfo = "Zonky Stats";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		238727A70D89CB070244B722 /* Pods_Zonky_StatsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Zonky_StatsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3584A9C267102AFEF9708C56 /* Pods_Zonky_Stats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Zonky_Stats.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F81764C0E39288994689765 /* Pods-Zonky Stats.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zonky Stats.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Zonky Stats/Pods-Zonky Stats.debug.xcconfig"; sourceTree = "<group>"; };
+		513D59278880E6D714E6E6D2 /* Pods-Zonky StatsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zonky StatsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Zonky StatsTests/Pods-Zonky StatsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9872BA2F8F8754EB2D076C2E /* Pods-Zonky Stats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zonky Stats.release.xcconfig"; path = "Pods/Target Support Files/Pods-Zonky Stats/Pods-Zonky Stats.release.xcconfig"; sourceTree = "<group>"; };
+		B862E62843FA0202CE946C8B /* Pods-Zonky StatsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zonky StatsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Zonky StatsTests/Pods-Zonky StatsTests.release.xcconfig"; sourceTree = "<group>"; };
+		F96A5BF81FBDB1920035C1D8 /* ZonkyStatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZonkyStatsViewController.swift; sourceTree = "<group>"; };
+		F96A5BF91FBDB1920035C1D8 /* Serializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serializable.swift; sourceTree = "<group>"; };
+		F96A5BFA1FBDB1930035C1D8 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		F96A5BFB1FBDB1930035C1D8 /* ApiRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
+		F96A5BFC1FBDB1930035C1D8 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		F96A5BFD1FBDB1930035C1D8 /* ZonkyAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZonkyAPI.swift; sourceTree = "<group>"; };
+		F96A5BFE1FBDB1930035C1D8 /* MyGraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyGraphView.swift; sourceTree = "<group>"; };
+		F96A5BFF1FBDB1930035C1D8 /* RadioBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioBarView.swift; sourceTree = "<group>"; };
+		F96A5C081FBDCE470035C1D8 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		F9DBDA5B1FBDB009003EE548 /* Zonky Stats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Zonky Stats.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9DBDA5E1FBDB009003EE548 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F9DBDA631FBDB009003EE548 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F9DBDA651FBDB009003EE548 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F9DBDA681FBDB009003EE548 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F9DBDA6A1FBDB009003EE548 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9DBDA6F1FBDB009003EE548 /* Zonky StatsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Zonky StatsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9DBDA731FBDB009003EE548 /* Zonky_StatsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zonky_StatsTests.swift; sourceTree = "<group>"; };
+		F9DBDA751FBDB009003EE548 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F9DBDA581FBDB009003EE548 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A29F31F9221C101EBF1A4B4 /* Pods_Zonky_Stats.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9DBDA6C1FBDB009003EE548 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51CDB1652D826225B73099B9 /* Pods_Zonky_StatsTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4CD8B7E2A1F9CE93BCFA3B75 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4F81764C0E39288994689765 /* Pods-Zonky Stats.debug.xcconfig */,
+				9872BA2F8F8754EB2D076C2E /* Pods-Zonky Stats.release.xcconfig */,
+				513D59278880E6D714E6E6D2 /* Pods-Zonky StatsTests.debug.xcconfig */,
+				B862E62843FA0202CE946C8B /* Pods-Zonky StatsTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DBA468F90D9BB67A3E999D60 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3584A9C267102AFEF9708C56 /* Pods_Zonky_Stats.framework */,
+				238727A70D89CB070244B722 /* Pods_Zonky_StatsTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F9DBDA521FBDB009003EE548 = {
+			isa = PBXGroup;
+			children = (
+				F9DBDA5D1FBDB009003EE548 /* Zonky Stats */,
+				F9DBDA721FBDB009003EE548 /* Zonky StatsTests */,
+				F9DBDA5C1FBDB009003EE548 /* Products */,
+				4CD8B7E2A1F9CE93BCFA3B75 /* Pods */,
+				DBA468F90D9BB67A3E999D60 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F9DBDA5C1FBDB009003EE548 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F9DBDA5B1FBDB009003EE548 /* Zonky Stats.app */,
+				F9DBDA6F1FBDB009003EE548 /* Zonky StatsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F9DBDA5D1FBDB009003EE548 /* Zonky Stats */ = {
+			isa = PBXGroup;
+			children = (
+				F96A5BFB1FBDB1930035C1D8 /* ApiRequest.swift */,
+				F96A5BFC1FBDB1930035C1D8 /* Model.swift */,
+				F96A5BFE1FBDB1930035C1D8 /* MyGraphView.swift */,
+				F96A5BFF1FBDB1930035C1D8 /* RadioBarView.swift */,
+				F96A5BFA1FBDB1930035C1D8 /* Repository.swift */,
+				F96A5BF91FBDB1920035C1D8 /* Serializable.swift */,
+				F96A5BFD1FBDB1930035C1D8 /* ZonkyAPI.swift */,
+				F96A5BF81FBDB1920035C1D8 /* ZonkyStatsViewController.swift */,
+				F9DBDA5E1FBDB009003EE548 /* AppDelegate.swift */,
+				F96A5C081FBDCE470035C1D8 /* Date.swift */,
+				F9DBDA621FBDB009003EE548 /* Main.storyboard */,
+				F9DBDA651FBDB009003EE548 /* Assets.xcassets */,
+				F9DBDA671FBDB009003EE548 /* LaunchScreen.storyboard */,
+				F9DBDA6A1FBDB009003EE548 /* Info.plist */,
+			);
+			path = "Zonky Stats";
+			sourceTree = "<group>";
+		};
+		F9DBDA721FBDB009003EE548 /* Zonky StatsTests */ = {
+			isa = PBXGroup;
+			children = (
+				F9DBDA731FBDB009003EE548 /* Zonky_StatsTests.swift */,
+				F9DBDA751FBDB009003EE548 /* Info.plist */,
+			);
+			path = "Zonky StatsTests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F9DBDA5A1FBDB009003EE548 /* Zonky Stats */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9DBDA781FBDB009003EE548 /* Build configuration list for PBXNativeTarget "Zonky Stats" */;
+			buildPhases = (
+				67D0BCA985502ECB45EEFB24 /* [CP] Check Pods Manifest.lock */,
+				F9DBDA571FBDB009003EE548 /* Sources */,
+				F9DBDA581FBDB009003EE548 /* Frameworks */,
+				F9DBDA591FBDB009003EE548 /* Resources */,
+				0FECFCC88AF770AB6F3BE237 /* [CP] Embed Pods Frameworks */,
+				5A30B3B8FA7D2A39CA8ECEAD /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Zonky Stats";
+			productName = "Zonky Stats";
+			productReference = F9DBDA5B1FBDB009003EE548 /* Zonky Stats.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F9DBDA6E1FBDB009003EE548 /* Zonky StatsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9DBDA7B1FBDB009003EE548 /* Build configuration list for PBXNativeTarget "Zonky StatsTests" */;
+			buildPhases = (
+				AD8BB8990848328738977A99 /* [CP] Check Pods Manifest.lock */,
+				F9DBDA6B1FBDB009003EE548 /* Sources */,
+				F9DBDA6C1FBDB009003EE548 /* Frameworks */,
+				F9DBDA6D1FBDB009003EE548 /* Resources */,
+				4EDAE5A3E907B3F846ECBBCE /* [CP] Embed Pods Frameworks */,
+				A964884592DE839DFD4AACF0 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F9DBDA711FBDB009003EE548 /* PBXTargetDependency */,
+			);
+			name = "Zonky StatsTests";
+			productName = "Zonky StatsTests";
+			productReference = F9DBDA6F1FBDB009003EE548 /* Zonky StatsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F9DBDA531FBDB009003EE548 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Lukas Gergel";
+				TargetAttributes = {
+					F9DBDA5A1FBDB009003EE548 = {
+						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0910;
+						ProvisioningStyle = Automatic;
+					};
+					F9DBDA6E1FBDB009003EE548 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F9DBDA5A1FBDB009003EE548;
+					};
+				};
+			};
+			buildConfigurationList = F9DBDA561FBDB009003EE548 /* Build configuration list for PBXProject "Zonky Stats" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F9DBDA521FBDB009003EE548;
+			productRefGroup = F9DBDA5C1FBDB009003EE548 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F9DBDA5A1FBDB009003EE548 /* Zonky Stats */,
+				F9DBDA6E1FBDB009003EE548 /* Zonky StatsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F9DBDA591FBDB009003EE548 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9DBDA691FBDB009003EE548 /* LaunchScreen.storyboard in Resources */,
+				F9DBDA661FBDB009003EE548 /* Assets.xcassets in Resources */,
+				F9DBDA641FBDB009003EE548 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9DBDA6D1FBDB009003EE548 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0FECFCC88AF770AB6F3BE237 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Zonky Stats/Pods-Zonky Stats-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4EDAE5A3E907B3F846ECBBCE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Zonky StatsTests/Pods-Zonky StatsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5A30B3B8FA7D2A39CA8ECEAD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Zonky Stats/Pods-Zonky Stats-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		67D0BCA985502ECB45EEFB24 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A964884592DE839DFD4AACF0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Zonky StatsTests/Pods-Zonky StatsTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD8BB8990848328738977A99 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F9DBDA571FBDB009003EE548 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F96A5C011FBDB1940035C1D8 /* Serializable.swift in Sources */,
+				F96A5C091FBDCE470035C1D8 /* Date.swift in Sources */,
+				F96A5C001FBDB1940035C1D8 /* ZonkyStatsViewController.swift in Sources */,
+				F96A5C071FBDB1940035C1D8 /* RadioBarView.swift in Sources */,
+				F9DBDA5F1FBDB009003EE548 /* AppDelegate.swift in Sources */,
+				F96A5C041FBDB1940035C1D8 /* Model.swift in Sources */,
+				F96A5C031FBDB1940035C1D8 /* ApiRequest.swift in Sources */,
+				F96A5C021FBDB1940035C1D8 /* Repository.swift in Sources */,
+				F96A5C051FBDB1940035C1D8 /* ZonkyAPI.swift in Sources */,
+				F96A5C061FBDB1940035C1D8 /* MyGraphView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9DBDA6B1FBDB009003EE548 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9DBDA741FBDB009003EE548 /* Zonky_StatsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F9DBDA711FBDB009003EE548 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F9DBDA5A1FBDB009003EE548 /* Zonky Stats */;
+			targetProxy = F9DBDA701FBDB009003EE548 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F9DBDA621FBDB009003EE548 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F9DBDA631FBDB009003EE548 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F9DBDA671FBDB009003EE548 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F9DBDA681FBDB009003EE548 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F9DBDA761FBDB009003EE548 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F9DBDA771FBDB009003EE548 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F9DBDA791FBDB009003EE548 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F81764C0E39288994689765 /* Pods-Zonky Stats.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2ZUQGC9W8K;
+				INFOPLIST_FILE = "Zonky Stats/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.pykaso.mobile.zonky;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		F9DBDA7A1FBDB009003EE548 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9872BA2F8F8754EB2D076C2E /* Pods-Zonky Stats.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2ZUQGC9W8K;
+				INFOPLIST_FILE = "Zonky Stats/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.pykaso.mobile.zonky;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		F9DBDA7C1FBDB009003EE548 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 513D59278880E6D714E6E6D2 /* Pods-Zonky StatsTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LZ44725HJ9;
+				INFOPLIST_FILE = "Zonky StatsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.pykaso.mobile.Zonky-StatsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Zonky Stats.app/Zonky Stats";
+			};
+			name = Debug;
+		};
+		F9DBDA7D1FBDB009003EE548 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B862E62843FA0202CE946C8B /* Pods-Zonky StatsTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LZ44725HJ9;
+				INFOPLIST_FILE = "Zonky StatsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.pykaso.mobile.Zonky-StatsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Zonky Stats.app/Zonky Stats";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F9DBDA561FBDB009003EE548 /* Build configuration list for PBXProject "Zonky Stats" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9DBDA761FBDB009003EE548 /* Debug */,
+				F9DBDA771FBDB009003EE548 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9DBDA781FBDB009003EE548 /* Build configuration list for PBXNativeTarget "Zonky Stats" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9DBDA791FBDB009003EE548 /* Debug */,
+				F9DBDA7A1FBDB009003EE548 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9DBDA7B1FBDB009003EE548 /* Build configuration list for PBXNativeTarget "Zonky StatsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9DBDA7C1FBDB009003EE548 /* Debug */,
+				F9DBDA7D1FBDB009003EE548 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F9DBDA531FBDB009003EE548 /* Project object */;
+}
