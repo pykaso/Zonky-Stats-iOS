@@ -35,16 +35,16 @@ class Zonky_StatsTests: XCTestCase {
         XCTAssertEqual(resource.methodPath, "/loans/marketplace")
         XCTAssertEqual(resource.queryParams, "fields=datePublished,covered&datePublished__gte=2017-01-01T00:00:00%2B01:00&datePublished__lt=2018-01-01T00:00:00%2B01:00")
         XCTAssertEqual(resource.url.absoluteString, "https://api.zonky.cz/loans/marketplace?fields=datePublished,covered&datePublished__gte=2017-01-01T00:00:00%2B01:00&datePublished__lt=2018-01-01T00:00:00%2B01:00")
-        let loans: ApiResponse<Loans> = resource.makeModel(data: JSON!)
-        XCTAssertNotNil(loans.model)
+        let loans: (Loans?, String?) = resource.makeModel(data: JSON!)
+        XCTAssertNotNil(loans.0)
         let empty = resource.makeModel(data: JSON_EMPTY!)
-        XCTAssertNil(empty.model)
-        XCTAssertNotNil(empty.error)
-        XCTAssertEqual(empty.error, "Failed to convert JSON to serializale object.")
+        XCTAssertNil(empty.0)
+        XCTAssertNotNil(empty.1)
+        XCTAssertEqual(empty.1, "Failed to convert JSON to serializale object.")
         let err  = resource.makeModel(data: JSON_ERR!)
-        XCTAssertNil(err.model)
-        XCTAssertNotNil(err.error)
-        XCTAssertEqual(err.error, "JSON response serialization error.")
+        XCTAssertNil(err.0)
+        XCTAssertNotNil(err.1)
+        XCTAssertEqual(err.1, "JSON response serialization error.")
         XCTAssertNotNil(resource.setupRequest(config: URLSessionConfiguration.ephemeral))
     }
     
@@ -82,28 +82,34 @@ class Zonky_StatsTests: XCTestCase {
     }
     
     func testApiRequest() {
-        let session = URLSession()
+        let session = MockURLSession()
+        session.nextData = JSON
         struct TestModel {
             
         }
+        
         struct TestResourse: ApiResource {
-            let methodPath = "/loans/marketplace"
-            var queryParams = "?test=params"
+            let methodPath = "/test/marketplace"
+            var queryParams = "test=params"
             func setupRequest(config: URLSessionConfiguration) -> URLSessionConfiguration {
                 return config
             }
-            func makeModel(serialization: Serializable) -> ApiResponse<TestModel> {
-                return ApiResponse(TestModel(), nil)
+            func makeModel(serialization: Serializable) -> TestModel {
+                return TestModel()
             }
         }
-        let request = ApiRequest(resource: TestResourse(), session: session)
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+        var request = ApiRequest(resource: TestResourse(), session: session)
+        request.load { (response: (TestModel?, String?))  -> Void  in
+            XCTAssertNil(response.1)
+            XCTAssertNotNil(response.0)
+        }
+        
+        request = ApiRequest(resource: TestResourse(), session: session)
+        session.nextError = NSError(domain: "error", code: 0, userInfo: nil)
+        request.load { (response: (TestModel?, String?))  -> Void  in
+            XCTAssertNil(response.0)
+            XCTAssertNotNil(response.1)
+            XCTAssertEqual(response.1, "The operation couldn’t be completed. (error error 0.)")
         }
     }
-    
 }

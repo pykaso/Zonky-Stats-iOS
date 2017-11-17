@@ -49,18 +49,14 @@ class Repository {
                 }
             }
             else {
-                apiRequest.load { [weak self] (response: ApiResponse<Loans>?) in
-                    guard let response = response else {
-                        completion(DataResponse(nil, "Unknown error"))
+                apiRequest.load { (response: (Loans?, String?)) -> Void  in
+                    
+                    if let error = response.1{
+                        completion(DataResponse(nil, error))
                         return
                     }
                     
-                    if response.error != nil {
-                        completion(DataResponse(nil, response.error))
-                        return
-                    }
-                    
-                    if let loans = response.model {
+                    if let loans = response.0 {
                         var aloans: [AgregatedLoans] = [AgregatedLoans]()
                         for l in 0..<loans.items.count {
                             let key: String = String(loans.items[l].key())

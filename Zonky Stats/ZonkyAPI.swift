@@ -12,18 +12,8 @@ protocol ApiResource {
     associatedtype Model
     var methodPath: String { get }
     var queryParams: String { get }
-    func makeModel(serialization: Serializable) -> ApiResponse<Model>
+    func makeModel(serialization: Serializable) -> Model
     func setupRequest(config: URLSessionConfiguration) -> URLSessionConfiguration
-}
-
-struct ApiResponse<Model> {
-    var model: Model?
-    var error: String?
-    
-    init(_ model: Model?, _ error: String?) {
-        self.model = model
-        self.error = error
-    }
 }
 
 extension ApiResource {
@@ -33,14 +23,15 @@ extension ApiResource {
         return URL(string: url)!
     }
     
-    func makeModel(data: Data) -> ApiResponse<Model> {
+    func makeModel(data: Data) -> (Model?, String?) {
         guard let json = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers) else {
-            return ApiResponse(nil, "JSON response serialization error.")
+            return (nil, "JSON response serialization error.")
         }
         guard let jsonSerialization = json as? Serializable else {
-            return ApiResponse(nil, "Failed to convert JSON to serializale object.")
+            return (nil, "Failed to convert JSON to serializale object.")
         }
-        return makeModel(serialization: jsonSerialization)
+        let r = makeModel(serialization: jsonSerialization)
+        return (r, nil)
     }
 }
 
@@ -59,10 +50,8 @@ struct MarketplaceResource: ApiResource {
         to = toD
     }
     
-    func makeModel(serialization: Serializable) -> ApiResponse<Loans> {
-        let loans = Loans(serialization: serialization)
-        return ApiResponse(loans, nil)
-        //return ApiResponse(nil, "Test chyby")
+    func makeModel(serialization: Serializable) -> Loans {
+        return Loans(serialization: serialization)
     }
     
     func setupRequest(config: URLSessionConfiguration) -> URLSessionConfiguration {

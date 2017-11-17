@@ -10,49 +10,55 @@ import Foundation
 
 protocol NetworkRequest: class {
     associatedtype Model
-    func load(withCompletion completion: @escaping (ApiResponse<Model>) -> Void)
-    func decode(_ data: Data) -> ApiResponse<Model>
-    func getSession() -> URLSession?
+    func load(withCompletion completion: @escaping (_ data: Model?, _ error: String?) -> Void)
+    func decode(_ data: Data) -> (Model?, String?)
+    func getSession() -> URLSessionProtocol
 }
 
 extension NetworkRequest {
-    fileprivate func load(_ url: URL, withCompletion completion: @escaping (ApiResponse<Model>) -> Void) {
-        if let urlsession = getSession(){
-            let task = urlsession.dataTask(with: url, completionHandler: { (data: Data?, response: URLResponse?, error: Error?) -> Void in
-                guard let data = data else {
-                    completion(ApiResponse(nil, error?.localizedDescription))
-                    return
-                }
-                completion(self.decode(data))
-            })
-            task.resume()
-        } else {
-            //throw CustomNSError("URLSession not configured")
-        }
+    fileprivate func load(_ url: URL, withCompletion completion: @escaping (_ data: Model?, _ error: String?) -> Void) {
+        let urlsession = getSession()
+        let task = urlsession.dataTask(with: url, completionHandler: { (data: Data?, response: URLResponse?, error: Error?) -> Void in
+            if error != nil {
+                completion(nil, error?.localizedDescription)
+                return
+            }
+            guard let data = data else {
+                completion(nil, "No data from server")
+                return
+            }
+            
+            let decoded = self.decode(data)
+            completion(decoded.0, decoded.1)
+            return
+        })
+        task.resume()
     }
 }
 
 class ApiRequest<Resource: ApiResource> {
     let resource: Resource
-    let session: URLSession
+    let session: URLSessionProtocol
     
-    init(resource: Resource, session: URLSession) {
+    init(resource: Resource, session: URLSessionProtocol) {
         self.resource = resource
         self.session = session
     }
 }
 
 extension ApiRequest: NetworkRequest {
-    func decode(_ data: Data) -> ApiResponse<Model> {
-        return resource.makeModel(data: data)
+    
+    func decode(_ data: Data) -> (Model?, String?) {
+        let r = resource.makeModel(data: data)
+        return (r.0, r.1)
     }
     
-    func load(withCompletion completion: @escaping (ApiResponse<Resource.Model>) -> Void) {
+    func load(withCompletion completion: @escaping (_ data: Resource.Model?, _ error: String?) -> Void) {
         load(resource.url, withCompletion: completion)
     }
     
 
-    func getSession() -> URLSession? {
+    func getSession() -> URLSessionProtocol {
         return session
     }
 }

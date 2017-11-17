@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1A29F31F9221C101EBF1A4B4 /* Pods_Zonky_Stats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3584A9C267102AFEF9708C56 /* Pods_Zonky_Stats.framework */; };
 		51CDB1652D826225B73099B9 /* Pods_Zonky_StatsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 238727A70D89CB070244B722 /* Pods_Zonky_StatsTests.framework */; };
+		F911A2761FBE46FF00131D37 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = F911A2751FBE46FF00131D37 /* Mocks.swift */; };
+		F911A2781FBE475900131D37 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F911A2771FBE475900131D37 /* Protocols.swift */; };
 		F96A5C001FBDB1940035C1D8 /* ZonkyStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96A5BF81FBDB1920035C1D8 /* ZonkyStatsViewController.swift */; };
 		F96A5C011FBDB1940035C1D8 /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96A5BF91FBDB1920035C1D8 /* Serializable.swift */; };
 		F96A5C021FBDB1940035C1D8 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96A5BFA1FBDB1930035C1D8 /* Repository.swift */; };
@@ -42,6 +44,8 @@
 		513D59278880E6D714E6E6D2 /* Pods-Zonky StatsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zonky StatsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Zonky StatsTests/Pods-Zonky StatsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9872BA2F8F8754EB2D076C2E /* Pods-Zonky Stats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zonky Stats.release.xcconfig"; path = "Pods/Target Support Files/Pods-Zonky Stats/Pods-Zonky Stats.release.xcconfig"; sourceTree = "<group>"; };
 		B862E62843FA0202CE946C8B /* Pods-Zonky StatsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zonky StatsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Zonky StatsTests/Pods-Zonky StatsTests.release.xcconfig"; sourceTree = "<group>"; };
+		F911A2751FBE46FF00131D37 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
+		F911A2771FBE475900131D37 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		F96A5BF81FBDB1920035C1D8 /* ZonkyStatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZonkyStatsViewController.swift; sourceTree = "<group>"; };
 		F96A5BF91FBDB1920035C1D8 /* Serializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serializable.swift; sourceTree = "<group>"; };
 		F96A5BFA1FBDB1930035C1D8 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
@@ -135,6 +139,7 @@
 				F96A5BF81FBDB1920035C1D8 /* ZonkyStatsViewController.swift */,
 				F9DBDA5E1FBDB009003EE548 /* AppDelegate.swift */,
 				F96A5C081FBDCE470035C1D8 /* Date.swift */,
+				F911A2771FBE475900131D37 /* Protocols.swift */,
 				F9DBDA621FBDB009003EE548 /* Main.storyboard */,
 				F9DBDA651FBDB009003EE548 /* Assets.xcassets */,
 				F9DBDA671FBDB009003EE548 /* LaunchScreen.storyboard */,
@@ -148,6 +153,7 @@
 			children = (
 				F9DBDA731FBDB009003EE548 /* Zonky_StatsTests.swift */,
 				F9DBDA751FBDB009003EE548 /* Info.plist */,
+				F911A2751FBE46FF00131D37 /* Mocks.swift */,
 			);
 			path = "Zonky StatsTests";
 			sourceTree = "<group>";
@@ -358,6 +364,7 @@
 				F96A5C011FBDB1940035C1D8 /* Serializable.swift in Sources */,
 				F96A5C091FBDCE470035C1D8 /* Date.swift in Sources */,
 				F96A5C001FBDB1940035C1D8 /* ZonkyStatsViewController.swift in Sources */,
+				F911A2781FBE475900131D37 /* Protocols.swift in Sources */,
 				F96A5C071FBDB1940035C1D8 /* RadioBarView.swift in Sources */,
 				F9DBDA5F1FBDB009003EE548 /* AppDelegate.swift in Sources */,
 				F96A5C041FBDB1940035C1D8 /* Model.swift in Sources */,
@@ -373,6 +380,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9DBDA741FBDB009003EE548 /* Zonky_StatsTests.swift in Sources */,
+				F911A2761FBE46FF00131D37 /* Mocks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
